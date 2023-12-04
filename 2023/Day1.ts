@@ -1,36 +1,36 @@
 // Part 1
-// const fs = require('fs')
-// fs.readFile('file.txt', (err, inputD) => {
-//     if (err) throw err;
-//     const fileSplit = inputD.toString().split('\n');
-//     // console.log(fileSplit[0])
-//     var total = 0;
+const fs = require('fs')
+fs.readFile('Day1.txt', (err, inputD) => {
+    if (err) throw err;
+    const fileSplit = inputD.toString().split('\n');
+    // console.log(fileSplit[0])
+    var total = 0;
 
-//     // for (string of fileSplit) {
-//     //     var filteredNum = ''
-//     //     for (char of string) {
-//     //         if (parseInt(char, 10)) {
-//     //             filteredNum += char
-//     //             // console.log('string', stringNum)
-//     //         }
-//     //     }
-//     //     filteredNum = filteredNum[0] + filteredNum[stringNum.length - 1]
-//     //     total = total + parseInt(filteredNum)
-//     // }
-//     fileSplit.forEach(line => {
-//         const numbers = line
-//             .split('')
-//             .filter(char => Number(char))
+    // for (string of fileSplit) {
+    //     var filteredNum = ''
+    //     for (char of string) {
+    //         if (parseInt(char, 10)) {
+    //             filteredNum += char
+    //             // console.log('string', stringNum)
+    //         }
+    //     }
+    //     filteredNum = filteredNum[0] + filteredNum[stringNum.length - 1]
+    //     total = total + parseInt(filteredNum)
+    // }
+    fileSplit.forEach(line => {
+        const numbers = line
+            .split('')
+            .filter(char => Number(char))
 
-//         const [first, last] = [numbers[0], numbers[numbers.length - 1]];
-//         console.log(typeof first)
-//             // console.log('First last',Number(first + last));
-//             // console.log(typeof numbers)
-//         total += Number(first + last);
+        const [first, last] = [numbers[0], numbers[numbers.length - 1]];
+        console.log(typeof first)
+            // console.log('First last',Number(first + last));
+            // console.log(typeof numbers)
+        total += Number(first + last);
 
-//     })
-//     console.log(total)
-// })
+    })
+    console.log(total)
+})
 
 //Part 2
 const fs = require("fs");
@@ -46,7 +46,7 @@ const nums = {
     nine: 9,
 };
 
-let data = fs.readFileSync("./file.txt", { encoding: "utf8" });
+let data = fs.readFileSync("./Day1.txt", { encoding: "utf8" });
 
 data = data.split("\n");
 
